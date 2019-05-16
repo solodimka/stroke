@@ -1,5 +1,4 @@
 body {
-  background-image: url('../img/bg_image.png');
   background-position: top;
   background-repeat: no-repeat; 
   background-size: contain;
@@ -16,6 +15,17 @@ ul, li {
 
 .header {
   margin-top: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 250px;
+    width: 38%;
+    background-image: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+  }
   .header__wrapper {
     display: flex;
     align-items: center;
@@ -50,6 +60,33 @@ ul, li {
 }
 
 .welcome {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url(../img/right_rect.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    right: 0;
+    bottom: 38px;
+    width: 62px;
+    height: 102px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url(../img/left_rect.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    bottom: 0px;
+    left: 0;
+    width: 60px;
+    height: 100px;
+  }
   .welcome__title {
     display: flex;
     flex-direction: column;
@@ -120,6 +157,17 @@ ul, li {
       background-color: #1b3e77;
       border: 2px solid #1b3e77;
       color: #fff;
+    }
+  }
+  .welcome__image_wrapper {
+    min-height: 0px;
+    .welcome__image {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      bottom: 327px;
+      left: auto;
+      right: 15px;
     }
   }
   .welcome__footer {
