@@ -26,7 +26,7 @@
 
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
@@ -71,7 +71,7 @@
             <a href="#" class="btn__calculator btn">
               RISK CALCULATOR
             </a>
-            <a href="#" class="btn__sign__in btn">
+            <a href=".popup__type__login" class="btn__sign__in btn popup__open">
               SIGN IN
             </a>            
           </div>
@@ -101,6 +101,109 @@
     </div>
   </section>
 
+  <div class="popup popup__type__login">
+    <div class="container">
+      <div class="row center">
+        <div class="col-xl-5 center">
+          <div class="popup__wrapper">
+
+            <div class="popup__header">
+              <a href=".popup__type__login" class="popup__close"><i class="fas fa-times"></i></a>
+            </div>
+            <h2 class="popup__title">Log in</h2>
+            <form class="form">
+
+              <label class="form__item">
+                <span class="form__label">Email</span>
+                <input class="form__input" name="email" type="email">
+              </label>  
+
+              <label class="form__item">
+                <span class="form__label">Password</span>
+                <input class="form__input" type="password">
+              </label>
+
+              <div>
+              <input type="checkbox" id="cb1"> <label class="form__label rules__label" for="cb1">Stay Signet In</label>
+              </div>
+
+              <div class="form__footer">
+                <p class="form__footer__desc">Don't have an account? 
+                  <a href=".popup__type__signin" class="form__footer__link popup__open">sign up</a>
+                </p>
+                <input class="form__submit" type="submit" value="LOG IN">
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup__type__signin">
+    <div class="container">
+      <div class="row center">
+        <div class="col-xl-5 center">
+          <div class="popup__wrapper">
+
+            <div class="popup__header">
+              <a href=".popup__type__signin" class="popup__close"><i class="fas fa-times"></i></a>
+            </div>
+
+            <h2 class="popup__title">Sign up</h2>
+
+            <form class="form">
+
+              <label class="form__item">
+                <span class="form__label">Register Us</span>
+                <select class="form__input form__select" name="user_role">
+                  <option value="patient">Pacient</option>
+                  <option value="doctor">Doctor</option>
+                </select>
+              </label>                    
+
+              <label class="form__item">
+                <span class="form__label">First Name</span>
+                <input class="form__input" name="firstname" type="text">
+              </label>                 
+
+              <label class="form__item">
+                <span class="form__label">Last name</span>
+                <input class="form__input" name="lastname" type="text">
+              </label>                
+
+              <label class="form__item">
+                <span class="form__label">Email</span>
+                <input class="form__input" name="email" type="email">
+              </label>  
+
+              <label class="form__item">
+                <span class="form__label">Password</span>
+                <input class="form__input" type="password">
+              </label>
+
+              <label class="form__item">
+                <span class="form__label">Confirm Password</span>
+                <input class="form__input" name="confirmpass" type="text">
+              </label>                 
+
+
+              <div class="form__footer">
+                <p class="form__footer__desc">Already have an account? 
+                  <a href=".popup__type__login" class="form__footer__link popup__open">Log In</a>
+                </p>
+                <input class="form__submit" type="submit" value="SIGN UP">
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer id="footer" class="footer">
     <div class="container">
       <div class="row">
@@ -121,6 +224,7 @@
     </div>
   </footer>
 
+  <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 
 </body>

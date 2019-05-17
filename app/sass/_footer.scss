@@ -1,0 +1,36 @@
+.footer {
+  background: #43536d;
+  color: #fff;
+  padding-top: 42px;
+  padding-bottom: 44px;
+  &__wrapper {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    .footer__left {
+      font-size: 14px;
+      margin: 0;
+      line-height: 33px;
+      margin-bottom: 15px;
+    }
+    .footer__right {
+      margin: 0;
+      font-size: 14px;
+      line-height: 33px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      .mail {
+        text-decoration: underline;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
