@@ -68,7 +68,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
           </p>
           <div class="btn__wrapper">
-            <a href="#" class="btn__calculator btn">
+            <a href=".popup__type__calculator" class="btn__calculator btn popup__open">
               RISK CALCULATOR
             </a>
             <a href=".popup__type__login" class="btn__sign__in btn popup__open">
@@ -124,7 +124,7 @@
               </label>
 
               <div>
-              <input type="checkbox" id="cb1"> <label class="form__label rules__label" for="cb1">Stay Signet In</label>
+              <input type="checkbox" id="remember"> <label class="form__label rules__label" for="remember">Stay Signed In</label>
               </div>
 
               <div class="form__footer">
@@ -198,6 +198,33 @@
 
             </form>
 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup popup__type__calculator">
+    <div class="container">
+      <div class="row center">
+        <div class="col-xl-12 center">
+          <div class="popup__wrapper"> 
+            <h2 class="calc__title">RISK CALCULATOR</h2>
+
+            <h3 class="conditii">Condiții</h3>
+            <div class="text__calc">
+            <p>Acest calculator efectuează un calcul ipotetic al riscului cardiovascular utilizând modelul SCORE creat de Societatea Europeană de Cardiologie.</p>
+            <p>Rezultatul calculului folosind acest calculator se bazează doar pe un set limitat de valori ale indicatorilor selectați de utilizator, este dat în scop ilustrativ și nu determină nici o stare medicală și prezența (absența) problemelor de sănătate.</p>
+            <p>Calculatorul nu are drept scop stabilirea unui diagnostic sau a unei alte definiții a stării utilizatorului.</p>
+            <p>Evaluarea stării și a diagnosticului trebuie efectuată numai de un medic.</p>              
+            </div>
+
+              <div>
+              <input type="checkbox" id="calc_term"> <label class="form__label term__label" for="calc_term">Da, sunt de acord cu termenii si conditiile de mai sus.</label>
+              <div class="btn__accept">
+              <input class="form__submit" type="submit" value="ACCEPT">                
+              </div>
+              </div>
           </div>
         </div>
       </div>

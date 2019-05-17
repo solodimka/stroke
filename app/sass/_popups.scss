@@ -19,7 +19,7 @@
     height: auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px #2f2f2f;
     .popup__header {
       display: flex;
@@ -93,11 +93,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     &__desc {
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
       color: #848484;
-      max-width: 165px;
+      max-width: 100%;
     }
     &__link {
       font-family: 'Roboto', sans-serif;
@@ -118,21 +119,110 @@
     border-radius: 25px;
     border: 2px solid #f587c2;
     cursor: pointer;
+    outline: none;
     &:hover {
       box-shadow: 0px 0px 20px 7px #e6dbdb;
       transition: color 0.5s ease;
       transition: background-color 0.5s ease;
     }
   }
+  .errors-block {
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+    color: #ef6bb2; 
+  }
+  .error-tip {
+    text-align: left;
+    font-size: 14px;
+    margin: 5px 0 18px 0;
+    display: block;
+    color: #ef6bb2; 
+  }
 }
 
 .popup__type__signin {
   .form__footer__desc {
-    font-size: 15px;;
-    max-width: 175px;
+    font-size: 15px;
   }
   .form__footer__link {
     font-size: 15px;
+  }
+}
+
+
+.popup__type__calculator {
+  .popup__wrapper {
+    padding: 28px 34px;
+    max-width: 1006px;
+    text-align: center;
+    margin-top: 7%;
+    margin-bottom: 7%;
+  }
+  .calc__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #173d7b;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    padding-bottom: 10px;
+    &::after {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      background-color: #f587c2;
+    }
+  }
+  .conditii {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #173d7b;
+    font-size: 18px;
+    margin-top: 13px;
+  }
+  .text__calc {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #494949;
+    font-size: 16px;
+    margin-bottom: 33px;
+    line-height: 23px;
+    padding: 0 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #000;
+  }
+  .term__label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #010101;
+    margin-bottom: 25px;
+  }
+  .form__submit {
+    min-width: 163px;
+    margin-bottom: 22px;
+  }
+  input[type=checkbox]:checked+label:before, input[type=checkbox]:not(:checked)+label:before {
+    border-radius: 9px;
+    border-color: #010101;
+  }
+  input[type=checkbox]:checked+label:after, input[type=checkbox]:not(:checked)+label:after {
+    content: ".";
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    top: -50%;
+    transform: translateY(-50%);
+    font-size: 41px;
+    border: none;
+    color: #010101;
   }
 }
 
@@ -201,4 +291,21 @@ input[type="checkbox"]:not(:checked) + label:after {
 
 input[type="checkbox"]:checked + label:after {
   opacity: 1;
+}
+
+
+@media only screen and (min-width : 480px) {
+  .form {
+     &__footer {
+      flex-direction: row;
+      &__desc {
+        max-width: 165px;
+      }
+    }
+  }
+  .popup__type__signin {
+    .form__footer__desc {
+      max-width: 175px;
+    }
+  }
 }

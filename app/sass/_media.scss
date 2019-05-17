@@ -292,7 +292,7 @@
 	}
 }
 
-@media only screen and (min-width : 2560px) {
+@media only screen and (min-width : 1910px) {
 	.container {
 		max-width: 1440px;
 	}
@@ -304,6 +304,7 @@
 			margin-top: 68px;
 			.header__logo {
 				font-size: 90px;
+				margin-right: 140px;
 			}
 		}
 	}
@@ -315,4 +316,7 @@
 			}
 		}
 	}
+}
+
+@media only screen and (min-width : 2560px) {
 }
